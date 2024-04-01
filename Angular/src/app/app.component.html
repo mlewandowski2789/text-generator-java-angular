@@ -1,0 +1,31 @@
+<div id="container">
+
+  <div id="options">
+    <div id="inputContainer">
+
+      <div class="inputElement">
+        <label for="lengthInput">Text length:</label>
+        <input [(ngModel)]="textLength" id="lengthInput">
+      </div>
+
+      <div class="inputElement">
+        <label for="sourceSelect">Source:</label>
+        <select [(ngModel)]="source" id="sourceSelect">
+          <option value="wiki">wiki</option>
+          <option value="romeo">romeo</option>
+          <option value="hamlet">hamlet</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div id="buttonContainer">
+      <button (click)="getData()" id="generateButton">Generate</button>
+    </div>
+  </div>
+
+  <div id="message" *ngIf="message">
+    {{ message }}
+  </div>
+</div>
+
